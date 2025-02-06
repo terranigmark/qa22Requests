@@ -1,8 +1,5 @@
-import configuration as c
-import requests
+import test_functions as tf
 
 
-def get_all_products():
-    response = requests.get(c.BASE_URL + c.PRODUCTS)
-    return response
-
+tf.get_all_products()
+print(tf.get_single_product(9).json())
